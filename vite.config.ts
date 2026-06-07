@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://huggingface.co/spaces/shdushantha/cancer-detection-api',
+        target: 'VITE_API_URL=https://shdushantha-cancer-detection-api.hf.space',
         changeOrigin: true,
       },
     },
