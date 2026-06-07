@@ -15,8 +15,7 @@ npm install
 npm run dev
 ```
 
-The Vite dev server proxies `/api` → `http://localhost:8000` automatically.
-Make sure your FastAPI backend is running on port 8000.
+The Vite dev server proxies `/api` → `https://huggingface.co/spaces/shdushantha/cancer-detection-api` automatically.
 
 ## Build for Production
 
@@ -43,7 +42,7 @@ To point at a different backend URL, update `vite.config.ts`:
 server: {
   proxy: {
     '/api': {
-      target: 'http://your-backend-url:8000',
+      target: 'https://huggingface.co/spaces/shdushantha/cancer-detection-api',
       changeOrigin: true,
     },
   },
