@@ -1,3 +1,14 @@
+---
+title: Cancer Detection Frontend
+emoji: 🔬
+colorFrom: green
+colorTo: blue
+sdk: static
+app_build_command: npm run build
+app_file: dist/index.html
+pinned: false
+---
+
 # LifeLens — Cancer Detection Frontend
 
 React + TypeScript frontend for the Cancer Detection API.
@@ -15,7 +26,7 @@ npm install
 npm run dev
 ```
 
-The Vite dev server proxies `/api` → `https://huggingface.co/spaces/shdushantha/cancer-detection-api` automatically.
+The Vite dev server proxies `/api` → `VITE_API_URL=https://shdushantha-cancer-detection-api.hf.space` automatically.
 
 ## Build for Production
 
@@ -42,7 +53,7 @@ To point at a different backend URL, update `vite.config.ts`:
 server: {
   proxy: {
     '/api': {
-      target: 'https://huggingface.co/spaces/shdushantha/cancer-detection-api',
+      target: 'VITE_API_URL=https://shdushantha-cancer-detection-api.hf.space',
       changeOrigin: true,
     },
   },
